@@ -1,0 +1,54 @@
+import java.io.*;
+import  java.util.*;
+
+class UserMainCode
+{
+
+    public static int output1;
+	    
+		
+    public static void digitSum(int input1){
+        //Write code here
+		int n=0,count=0;
+		if(input1<0)
+		{
+			n=-input1;
+			count++;
+        }
+		if(n>9)
+		{
+			while(n>9)
+			{
+			int sum=0;
+		      while(n>0)
+			  {
+				 sum+=n%10;
+				  n=n/10;
+			  }
+				n=sum;
+			}
+			if(count>0)
+			{
+				output1=-n;
+			}
+			else
+			{
+				output1=n;
+			}
+		}
+		else
+		{
+			if(count>0)
+			{
+				output1=-input1;
+			}
+			else
+			{
+				output1=input1;
+			}
+		}
+		System.out.println(output1);
+	}		
+        
+}		
+		
